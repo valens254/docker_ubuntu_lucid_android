@@ -44,7 +44,7 @@ WORKDIR /build
 
 VOLUME /build
 
-COPY docker-entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
-
+#COPY docker-entrypoint.sh /entrypoint.sh
+#ENTRYPOINT ["/entrypoint.sh"]
+USER builduser
 CMD ["./mk"]
