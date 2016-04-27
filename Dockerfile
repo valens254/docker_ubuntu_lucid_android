@@ -7,10 +7,10 @@ RUN echo "deb http://ppa.launchpad.net/git-core/ppa/ubuntu lucid main" > /etc/ap
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A1715D88E1DF1F24 \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886 \
     && apt-get update \
-    && apt-get upgrade -y
+    && apt-get upgrade -y        
 RUN apt-get install -y \
-        oracle-java6-set-default \
-		git \        
+		git \   
+        ia32-libs \     
 		gnupg \
 		flex \
 		bison \
@@ -32,6 +32,7 @@ RUN apt-get install -y \
         libx11-dev \
         libreadline6-dev \
         libgl1-mesa-glx \
+        oracle-java6-set-default \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /build
