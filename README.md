@@ -2,4 +2,4 @@
 #Use
 docker pull igorsh/ubuntu10.04-android
 
-docker run -it --rm -v /path/to/build/directory:/build -w /build igorsh/ubuntu10.04-android ./mk watch n
+docker run -it --rm -v "$PWD":/build -w /build igorsh/ubuntu10.04-android
